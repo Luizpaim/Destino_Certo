@@ -1,0 +1,74 @@
+section#cadastrar {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    background: url("../image/home.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    border-top: 5px solid yellow;
+    border-bottom: 5px solid deepskyblue;
+}
+
+section#login {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    background: url("../image/home.jpg");
+    background-size: cover;
+    border-radius: 20px;
+    border-top: 5px solid yellow;
+    border-bottom: 5px solid deepskyblue;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 55px;
+}
+
+.flex-item {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+label {
+    text-transform: capitalize;
+    text-shadow: 1px 3px 3px black;
+    color: white;
+    font-size: 20pt;
+    font-family: cursive;
+}
+
+input {
+    border-radius: 0px 20px 0;
+    background-color: yellow;
+    border: 5px solid white;
+    box-shadow: 1px 1px 3px black;
+}
+
+input:hover {
+    background-color: deepskyblue;
+}
+
+input:placeholder-shown {
+    text-align: center;
+    text-decoration-color: rgba(22, 240, 22, 0.425);
+}
+
+input#cadastrar {
+    color: green;
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-item h1 {
+    background-color: yellow;
+    padding: 20px;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    border-radius: 50px;
+    border-top: 5px solid deepskyblue;
+    box-shadow: 1px 1px 3px black;
+    font-family: cursive;
+}

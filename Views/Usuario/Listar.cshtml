@@ -1,0 +1,104 @@
+@model IEnumerable<PacotesTuristicos>
+@using Microsoft.AspNetCore.Http;
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>Pacotes Cadastrados no Sistema</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="~/css/logado.css"/> 
+      <link rel="stylesheet" href="~/css/cadastrar.css"/>
+      <link rel="stylesheet" href="~/css/layout.css"/>
+  </head>
+  <body>
+      <header>
+<section id="logado">
+    <nav>
+<ul class="navegacao">
+    <li>
+    <a asp-area="" asp-controller="Usuario" asp-action="CadastroPacote">
+           @if (Context.Session.GetInt32("idUsuarioUsuario") != null)
+            {
+                <span>Olá @Context.Session.GetString("nomeUsuario") Sua Id é : @Context.Session.GetInt32("idUsuarioUsuario")</span>
+            }
+    </a>
+</li>
+    <li >
+     <a  asp-area="" asp-controller="Usuario" asp-action="CadastroPacote">Cadastrar Pacote</a>
+    </li>
+    <li>
+    <a  asp-area="" asp-controller="Usuario" asp-action="AlterarPacotes">Alterar Pacote</a>
+    </li>
+     <li>
+    <a  asp-area="" asp-controller="Usuario" asp-action="ExcluirPacotes">Excluir Pacote</a>
+    </li>
+    <li>
+    <a  asp-area="" asp-controller="Usuario" asp-action="Listar">Ver Pacotes Cadastrados</a>
+    </li>
+    <li>
+    <a asp-area="" asp-controller="Usuario" asp-action="Logout">Sair</a>
+     </li>
+</ul>
+</nav>
+    </section>
+      </header>
+      <main>
+<section class="pacotes">
+<div class="row">
+    <div class="flex-item">
+        <h1>Pacotes Cadastrados</h1>
+    </div>
+</div>
+ <table class="table table-hover table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Origem</th>
+      <th scope="col">Destino</th>
+      <th scope="col">Atrativos</th>
+      <th scope="col">Data Saida</th>
+      <th scope="col">Data Retorno</th>
+       <th scope="col">Id Colaborador</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    @foreach (PacotesTuristicos p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Nome</td>
+                <td>@p.Origem</td>
+                <td>@p.Destino</td>
+                <td>@p.Atrativos</td>
+                <td>@p.Saida</td>
+                <td>@p.Retorno</td>
+                <td>@p.Usuario Colaborador</td>
+            </tr>
+        }
+   
+  </tbody>
+</table>
+    
+    </section>
+      </main>
+      <footer>
+<div class="propia">
+        <div class="flex-item">
+            &copy; 2021 - Destino Certo 
+        </div>
+    </div>
+      </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+

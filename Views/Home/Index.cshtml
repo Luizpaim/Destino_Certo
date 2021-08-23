@@ -1,8 +1,321 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model Usuario
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>@ViewData["Title"] home - Destino Certo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/layout.css"/>
+    <link rel="stylesheet" href="~/css/logado.css"/>
+    
+  </head>
+  <body>
+      <header>
+<div class="container-storange">
+
+            <nav>
+               <a asp-area="" asp-controller="Home" asp-action="Index"> <img src="~/image/iconlogo.jpg" title="Home"></a>
+                <ul class="navegacao">
+
+                    <li>
+                       <a asp-area="" asp-controller="Usuario" asp-action="Cadastro"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-text" viewBox="0 0 16 16">
+  <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
+  <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+</svg>&nbsp;&nbsp;Cadastrar-se como Colaborador</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Usuario" asp-action="Login"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>&nbsp; Entrar</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row1">
+
+            <div class="flex-item">
+                <H3> VOOS</H3>
+            </div>
+
+            <div class="flex-item">
+                <a>PACOTES PROMO </a>
+            </div>
+            <div class="flex-item">
+                <a>TOP OFERTAS </a>
+            </div>
+            <div class="flex-item">
+                <a>HOTÉIS </a>
+            </div>
+            <div class="flex-item">
+                <a>SEGURO </a>
+            </div>
+            <div class="flex-item">
+                <a>CARROS </a>
+            </div>
+
+        </div>
+
+      </header>
+      <main>
+          <div class="container-fluid">
+    <section class="image">
+    
+    </section>
+    </div>
+    <div class="container-fluid">
+        
+       <section class="pacotes" >
+           <div class="titulop"> <h1>Pacotes Turísticos</h1></div>
+           <select class="custom-select">
+  
+  <option  selected value="1">São Paulo</option>
+  <option value="2">Rio de Janeiro</option>
+  <option value="3">Alagoas</option>
+  <option value="3">...</option>
+</select>
+        <div class="row m-5">
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/foz-do-iguacu.jpg" alt="Foz do Iguaçu">
+                    <div class="card-body">
+                        <p class="card-text">Foz do Iguaçu</p>
+                        <p>
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p>
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 82,00</p>
+                        <p class="card-text">
+                            <h6>ou a partir de R$946 à vista</h6>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/maceio.jpg" alt="Maceió">
+                    <div class="card-body">
+                        <p class="card-text">Maceió</p>
+                        <p>
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p>
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 109,00</p>
+                        <p class="card-text">
+                            <h6>ou a partir de R$1.256 à vista</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/fortaleza.jpg" alt="Fortaleza">
+                    <div class="card-body">
+                        <p class="card-text">Fortaleza</p>
+                        <p>
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p>
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 120,00</p>
+                        <p class="card-text">
+                            <h6>ou a partir de R$1.385 à vista</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/argentina.webp" alt="Argentina">
+                    <div class="card-body">
+                        <p class="card-text">Argentina</p>
+                        <p class="card-text">
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p class="card-text">
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 133,00</p>
+                        <p class="card-text">
+                            <h6>ou a partir de R$1.538 à vista</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/paraguai.jpg" alt="Paraguai">
+                    <div class="card-body">
+                        <p class="card-text">Paraguai</p>
+                        <p>
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p>
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 145,00</p>
+                        <p class="card-text">
+                            <h6>ou a partir de R$1.682 à vista</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/uruguai.jpg" alt="uruguai">
+                    <div class="card-body">
+
+                        <p class="card-text">uruguai</p>
+                        <p>
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p>
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 160,00</p>
+                        <p class="card-text">
+                            <h6>ou a partir de R$1.849 à vista</h6>
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/peru.jpg" alt="Peru">
+                    <div class="card-body">
+                        <p class="card-text">Peru</p>
+                        <p>
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p>
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 196,00</p>
+                        <p class="card-text">
+                            <h6>ou a partir de R$2.270 à vista</h6>
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/chile.jpg" alt="Chile">
+                    <div class="card-body">
+                        <p class="card-text">Chile</p>
+                        <p>
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p>
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 204,00</p>
+                        <p class="card-text">
+                            <h6>ou a partir de R$2.362 à vista</h6>
+                        </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/rio-de-janeiro.jpg" alt="Rio de Janeiro<">
+                    <div class="card-body">
+                        <p class="card-text">Rio de Janeiro</p>
+                        <p>
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p>
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 43,00</p>
+                        <p class="card-text">
+                            <h6>ou a partir de R$501 à vista</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/salvador.jpg" alt="Salvador">
+                    <div class="card-body">
+                        <p class="card-text">Salvador</p>
+                        <p>
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p>
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 78,00</p>
+                        <p class="card-text">
+                            <h6>ou a partir de R$906 à vista</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/estados-unidos.jpg" alt="Estados Unidos">
+                    <div class="card-body">
+                        <p class="card-text">Estados Unidos</p>
+                        <p>
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p>
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 884,00</p>
+                        <p class="card-text">
+                            <h6>As taxas podem alterar</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-left vitrine">
+                    <img class="card-img-top" src="image/colombia.jpg" alt="Colombia">
+                    <div class="card-body">
+                        <p class="card-text">Colombia</p>
+                        <p>
+                            <h6>Café a manhã 3 diárias ou +</h6>
+                        </p>
+                        <p>
+                            <h6>em até 12x</h6>
+                        </p>
+                        <p class="card-text">R$ 972,00</p>
+                        <p class="card-text">
+                            <h6>As taxas podem alterar</h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    </div>
+      </main>
+      <footer>
+<div class="propia">
+        <div class="flex-item">
+            &copy; 2021 - Destino Certo 
+        </div>
+    </div>
+      </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

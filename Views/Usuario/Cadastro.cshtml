@@ -1,0 +1,115 @@
+@model Usuario
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Cadastro de Usuário-Colaborador</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/cadastrar.css"/> 
+    <link rel="stylesheet" href="~/css/layout.css"/> 
+  </head>
+  <body>
+     <header>
+<div class="container-storange">
+            <nav>
+               <a asp-area="" asp-controller="Home" asp-action="Index"> <img src="~/image/iconlogo.jpg" title="Home"></a>
+                <ul class="navegacao">
+
+                    <li>
+                       <a asp-area="" asp-controller="Usuario" asp-action="Cadastro"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-right-text" viewBox="0 0 16 16">
+  <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
+  <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+</svg>&nbsp;&nbsp;Cadastrar-se como Colaborador</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Usuario" asp-action="Login"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>&nbsp; Entrar</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row1">
+
+            <div class="flex-item">
+                <H3> VOOS</H3>
+            </div>
+
+            <div class="flex-item">
+                <a>PACOTES PROMO </a>
+            </div>
+            <div class="flex-item">
+                <a>TOP OFERTAS </a>
+            </div>
+            <div class="flex-item">
+                <a>HOTÉIS </a>
+            </div>
+            <div class="flex-item">
+                <a>SEGURO </a>
+            </div>
+            <div class="flex-item">
+                <a>CARROS </a>
+            </div>
+        </div>
+     </header> 
+     <main>
+
+<section id="cadastrar">
+<div class="container-fluid">
+    
+
+     <form asp-action="Cadastro" method="POST">
+       <div class="row">
+         <div class="flex-item">
+           <h1>Cadastrar Usuário Colaborador</h1>
+         </div>
+       </div>
+      <div class="row">
+        <div class="flex-item"><p>
+          <label asp-for="Nome">Nome&nbsp; </label>
+          <input type="text" asp-for="Nome" placeholder="Nome completo"  maxlength="255" size="40" required/>
+      </p></div>
+        <div class="flex-item"> <p>
+          <label asp-for="Login">Login&nbsp; </label>
+          <input asp-for="Login" type="text" placeholder="Nome@Sobrenome" maxlength="20" size="20" required/>
+      </p></div>
+      </div>
+      <div class="row">
+        <div class="flex-item"><p>
+          <label asp-for="DataNascimento">Data Nascimento&nbsp; </label>
+          <input type="date" asp-for="DataNascimento" required/>
+      </p></div>
+        <div class="flex-item"><p>
+          <label asp-for="Senha">Senha&nbsp; </label>
+          <input type="password" asp-for="Senha" size="20" maxlength="8" placeholder="Até 8 caracteres" required/>
+      </p>
+      </div>
+        <div class="flex-item1">
+          <p>
+            <input id="cadastrar" type="submit" value="Cadastrar"/>
+        </p>
+        </div>
+        </div>
+        </form>
+        </div>
+  </section>
+     </main>
+     <footer>
+<div class="propia">
+        <div class="flex-item">
+            &copy; 2021 - Destino Certo 
+        </div>
+    </div>
+     </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
